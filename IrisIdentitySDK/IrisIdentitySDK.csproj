@@ -4,25 +4,51 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <!-- Package Configuration -->
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>IrisIdentitySDK</PackageId>
     <Version>1.0.0</Version>
-    <Authors>Iris Framework</Authors>
-    <Description>C# SDK for Iris Identity Server - JWT-based authentication and user management</Description>
+    <Authors>Iris Framework, Gerasimos Maropoulos</Authors>
+    <Company>Iris Framework</Company>
+    <Product>Iris Identity SDK</Product>
+    <Title>Iris Identity SDK for .NET</Title>
+    <Description>A comprehensive C# SDK for integrating with the Iris Identity Server, providing JWT-based authentication, user management, and OAuth2/OIDC support. Features include secure password encryption, token validation, admin operations, and ASP.NET Core integration.</Description>
+    <Summary>C# SDK for Iris Identity Server - JWT authentication and user management</Summary>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/kataras/iris</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/kataras/iris</RepositoryUrl>
-    <PackageTags>iris;authentication;jwt;oauth2;identity;sdk</PackageTags>
+    <Copyright>Copyright (c) 2025 Gerasimos Maropoulos</Copyright>
+    
+    <!-- URLs -->
+    <PackageProjectUrl>https://github.com/iris-contrib/identity-sdk-csharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/iris-contrib/identity-sdk-csharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    
+    <!-- Package metadata -->
+    <PackageTags>iris;authentication;jwt;oauth2;identity;sdk;csharp;dotnet;oidc;security</PackageTags>
+    <PackageReleaseNotes>Initial release of Iris Identity SDK for .NET 8.0</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    
+    <!-- Assembly info -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyTitle>Iris Identity SDK</AssemblyTitle>
+    <AssemblyDescription>C# SDK for Iris Identity Server</AssemblyDescription>
   </PropertyGroup>
 
+  <!-- Include README in package -->
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="8.0.0" />
-    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.0.3" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.0.3" />
-    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+    <None Include="../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.1" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.2.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
   </ItemGroup>
 
 </Project>
